@@ -45,3 +45,11 @@ La grafica e i marchi del template restano di proprietà dei rispettivi titolari
 Il testo broadcast è modificabile. Se Postimages non restituisce automaticamente il link o blocca la finestra, usa il caricamento alternativo e incolla il link nel campo dedicato. L’integrazione segue il protocollo popup/postMessage del plugin ufficiale Postimages; il caricamento esterno completo dipende dal servizio ed è da verificare nel browser.
 
 La raccolta viene salvata localmente in IndexedDB nel browser. Sostituendo una locandina il collage e il link precedente vengono invalidati, così puoi rigenerarli con le immagini aggiornate.
+
+## Sezione BALAC
+
+Usa il selettore CIDA/BALAC in alto, oppure apri `dist/balac.html`.
+
+BALAC usa il format grafico fornito, gli stessi campi e calcoli delle offerte CIDA e bozze separate nel browser. Il prezzo predefinito è indicato IVA inclusa; il calcolo non aggiunge automaticamente IVA, quindi inserisci il prezzo nella base fiscale desiderata e modifica la nota quando necessario.
+
+La sezione BALAC non contiene il collage: **Crea link Postimages** scarica la singola locandina JPG e apre Postimages. Seleziona il JPG appena scaricato e genera il link: viene recuperato nel messaggio broadcast BALAC. È disponibile anche l’inserimento manuale del link. Se modifichi la locandina, il collegamento precedente viene invalidato.
