@@ -33,3 +33,15 @@ Le bozze restano nel browser del dispositivo utilizzato. Esporta il progetto JSO
 - `dist/template.jpg`: format CIDA originale.
 
 La grafica e i marchi del template restano di proprietà dei rispettivi titolari.
+
+## Collage delle quattro promo del giorno
+
+1. Crea una locandina e premi **Aggiungi questa locandina**. Ripeti per le quattro promo, oppure carica immagini già pronte.
+2. Gli slot seguono l’ordine alto sinistra, alto destra, basso sinistra, basso destra. Puoi sostituire, spostare o rimuovere ogni immagine.
+3. Premi **Crea collage ≤ 300 KB**. Il JPG viene compresso verificando un limite rigoroso di 300.000 byte. Se necessario, vengono ridotte le dimensioni; il file non viene reso scaricabile se supera il limite.
+4. Premi **Scarica JPG**, oppure **Crea link Postimages**: il collage viene scaricato e si apre la finestra Postimages. Seleziona il JPG scaricato; il link restituito viene inserito nel messaggio broadcast.
+5. Premi **Copia messaggio** e incollalo nella lista broadcast WhatsApp.
+
+Il testo broadcast è modificabile. Se Postimages non restituisce automaticamente il link o blocca la finestra, usa il caricamento alternativo e incolla il link nel campo dedicato. L’integrazione segue il protocollo popup/postMessage del plugin ufficiale Postimages; il caricamento esterno completo dipende dal servizio ed è da verificare nel browser.
+
+La raccolta viene salvata localmente in IndexedDB nel browser. Sostituendo una locandina il collage e il link precedente vengono invalidati, così puoi rigenerarli con le immagini aggiornate.
