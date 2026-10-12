@@ -19,7 +19,8 @@ function renderBalac(){
  const label=mode==='quantity'?(products.length===1?euro(quantityPromoPrice(products[0].price)):'PREZZI UNITARI'):t.final!==t.original?`${euro(t.original)} → ${euro(t.final)}`:euro(t.final);let priceSize=36;do{ctx.font=`bold ${priceSize}px Arial`;if(ctx.measureText(label).width<=540)break;priceSize--}while(priceSize>14);const width=ctx.measureText(label).width+22;
  ctx.save();ctx.fillStyle=accent;ctx.shadowColor='#0005';ctx.shadowBlur=9;ctx.shadowOffsetY=5;ctx.beginPath();ctx.moveTo(443,y);ctx.lineTo(443+width,y);ctx.lineTo(443+width+25,y+21);ctx.lineTo(443+width,y+42);ctx.lineTo(443,y+42);ctx.closePath();ctx.fill();ctx.restore();text(label,450,y+33,priceSize,'#fff','bold',width-9);text(mode==='quantity'?'NETTO PROMO':$('tax').value.toUpperCase(),443,y+64,22,accent,'bold',585);
  if(mode==='gift'&&$('gift').value)wrap($('gift').value.toUpperCase(),436,y+111,26,590,32,2,accent,'bold');
- if(images.photo)contain(images.photo,30,370,385,580);else{ctx.strokeStyle='#ddd';ctx.setLineDash([9,7]);ctx.strokeRect(40,550,366,368);ctx.setLineDash([]);text('CARICA FOTO PRODOTTO',65,738,20,'#bbb','normal',320)}
+ if(mode==='gift'&&images.giftphoto){if(images.photo)contain(images.photo,30,365,385,260);text('OMAGGIO',55,655,22,accent,'bold',340);contain(images.giftphoto,30,669,385,220)}else if(images.photo)contain(images.photo,30,370,385,promoNotice()?515:580);else{ctx.strokeStyle='#ddd';ctx.setLineDash([9,7]);ctx.strokeRect(40,550,366,368);ctx.setLineDash([]);text('CARICA FOTO PRODOTTO',65,738,20,'#bbb','normal',320)}
+ drawPromoNotice(40,904,990);
  if($('date').value)text($('date').value,436,946,19,'#555','normal',590);
  const footer=$('footer').value;if(footer!=='www.balac.it • WhatsApp 349 6844916'){ctx.fillStyle='#2da044';ctx.fillRect(0,980,1080,100);text(footer,40,1044,29,'#fff','bold',1000)}
 }
